@@ -75,6 +75,7 @@ class ResearcherRequestComponent:
                     except DataDoesNotExistError:
                         pass
 
+
 class NeonatalPretermDataLoader:
 
     def __init__(self):
