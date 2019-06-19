@@ -1,3 +1,4 @@
+import pathlib
 import warnings
 import shutil
 import os
@@ -13,17 +14,22 @@ locations = ['Uttar Pradesh', 'Kerala', 'Bihar']
 
 
 def format_fname(fname: str):
-    return fname.replace(' ', '_').replace(',', '_').lower()
+    return fname.replace(' ', '_').replace(',', '').lower()
+
+def get_output_path():
+    path = pathlib.Path("/share/costeffectiveness/artifacts/vivarium_data_requests/jun_17_laura_lamberti/")
+    path.mkdir(parents=True, exist_ok=True)
+    return path
 
 
 def create_specs():
     """Generate model specifications for each location using the template."""
     for loc in locations:
         for type in ['Urban', 'Rural']:
-            name = loc + type
+            name = loc + ', ' + type
             fname = format_fname(name)
 
-            with open("template.yaml") as f:
+            with open("model_specs/template.yaml") as f:
                 template_spec = f.read()
 
             template_spec = template_spec.format(name=name, fname=fname)
@@ -34,7 +40,11 @@ def create_specs():
 
 def run(fname: str):
     """build the artifact defined by fname"""
-    subprocess.call(["build_artifact", "-v", f"./model_specs/{fname}.yaml"])
+    output_path = get_output_path()
+    subprocess.run(["build_artifact", "-v", "-o", str(output_path), f"./model_specs/{fname}.yaml"],
+                   check=True,
+                   stdout=subprocess.PIPE)
+    print(f"Artifact written to {output_path}/{fname}.hdf")
 
 
 def launch():
@@ -45,7 +55,7 @@ def launch():
         jt.remoteCommand = shutil.which('python')
         for loc in locations:
             for type in ['Urban', 'Rural']:
-                name = loc + type
+                name = loc + ', ' +  type
                 fname = format_fname(name)
                 jt.nativeSpecification = f'-V -w n -q all.q -l m_mem_free=20G -N {fname} -l fthread=1 -P proj_cost_effect'
                 jt.args = ['run_all.py', 'run', fname]
