@@ -18,12 +18,20 @@ class ResearcherRequestComponent:
 
         # Top-level things
         keys = [
+                # pop info
             "population.structure",
             "population.theoretical_minimum_risk_life_expectancy",
-            "cause.all_causes.cause_specific_mortality",
+                # what was asked for
             "covariate.skilled_birth_attendance_proportion.estimate",
             "covariate.in_facility_delivery_proportion.estimate",
-            "covariate.socio_demographic_index.estimate"
+            "covariate.socio_demographic_index.estimate",
+                # for fun
+            "covariate.healthcare_access_and_quality_index.estimate",
+            "covariate.hospital_beds_per_1000.estimate",
+                # components of SDI
+            "covariate.total_fertility_rate.estimate",
+            "covariate.gdp_per_capita_base_2010.estimate",
+            "covariate.maternal_education_years_per_capita.estimate"
         ]
         for key in keys:
             try:
