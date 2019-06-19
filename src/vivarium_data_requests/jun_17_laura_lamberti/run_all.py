@@ -62,11 +62,12 @@ def launch():
         jt = s.createJobTemplate()
         jt.workingDirectory = os.getcwd()
         jt.remoteCommand = shutil.which('python')
-        for loc in locations:
+        for loc in get_india_subnationals():
             fname = format_fname(loc)
             jt.nativeSpecification = f'-V -w n -q all.q -l m_mem_free=20G -N {fname} -l fthread=1 -P proj_cost_effect'
             jt.args = ['run_all.py', 'run', fname]
             s.runJob(jt)
+            print(f"Submitted job for {loc}")
         s.deleteJobTemplate(jt)
 
 
