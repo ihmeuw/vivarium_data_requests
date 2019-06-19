@@ -10,6 +10,9 @@ class ResearcherRequestComponent:
     def __init__(self):
         self.causes = [gbd_mapping.causes.neonatal_encephalopathy_due_to_birth_asphyxia_and_trauma,
                        gbd_mapping.causes.neonatal_preterm_birth]
+    @property
+    def name(self):
+        return "researcher_request_component"
 
     def setup(self, builder):
 
