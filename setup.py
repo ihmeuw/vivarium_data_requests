@@ -15,6 +15,7 @@ if __name__ == "__main__":
         long_description = f.read()
 
     install_requirements = [
+        'vivarium_gbd_access',
         'vivarium_inputs',
         'vivarium_public_health',
         'gbd_mapping'
