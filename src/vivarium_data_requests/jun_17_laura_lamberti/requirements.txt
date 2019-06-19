@@ -1,2 +1,5 @@
 drmaa
+vivarium_gbd_access==2.0.3
+vivarium_inputs==3.0.0
+vivarium_public_health==0.9.13
 
