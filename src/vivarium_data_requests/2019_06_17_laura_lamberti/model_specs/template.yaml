@@ -5,7 +5,7 @@ plugins:
             builder_interface: "vivarium_public_health.dataset_manager.ArtifactManagerInterface"
 
 components:
-    vivarium_data_requests.jun_17_laura_lamberti:
+    vivarium_data_requests.2019_06_17_laura_lamberti:
         - ResearcherRequestComponent()
 
 configuration:
