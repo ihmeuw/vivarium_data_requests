@@ -8,7 +8,7 @@ import vivarium_gbd_access.gbd as gbd
 
 """
 Locations:
-    all states in Indea, urban/rural
+    all states in India, urban/rural
 """
 
 
