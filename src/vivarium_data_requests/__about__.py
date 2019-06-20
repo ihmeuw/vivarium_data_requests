@@ -7,7 +7,7 @@ __title__ = "vivarium_data_requests"
 __summary__ = "Custom data loading components and model specifications to fulfill data requests."
 __uri__ = "https://github.com/ihmeuw/vivarium_data_requests"
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 __author__ = "The vivarium developers"
 __email__ = "vivarium.dev@gmail.com"
