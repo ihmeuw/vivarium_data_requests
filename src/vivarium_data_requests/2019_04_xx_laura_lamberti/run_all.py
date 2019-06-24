@@ -12,7 +12,7 @@ JOB_MEM = 20  # GB
 
 
 def format_fname(fname: str):
-    return fname.replace(' ', '_').replace(',', '').lower()
+    return fname.replace(' ', '_').replace('-', '_').replace(',', '').lower()
 
 
 def get_output_path():
@@ -76,3 +76,4 @@ if __name__ == "__main__":
         run(fname)
     else:
         launch()
+
