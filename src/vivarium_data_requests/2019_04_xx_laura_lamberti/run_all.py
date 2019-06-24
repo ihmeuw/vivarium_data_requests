@@ -3,26 +3,11 @@ import pathlib
 import os
 import subprocess
 
-"""
-Locations:
-    India
-    Ethiopia
-    Sri Lanka
 
-    Uttar Pradesh
-    Kerala
-    Bihar
-
-    Sub-saharan Africa Super-region
-    South Asia Region
-    Low SDI
-    Low-middle SDI
-    Middle SDI
-    High-middle SDI
-    High SDI
-"""
-
-LOCATIONS = []
+# This is national, supernational, and subnational all together
+LOCATIONS = ['Ethiopia', 'India', 'Sri Lanka', 'Sub-Saharan Africa', 'South Asia', 'Low SDI', 'Low-middle SDI',
+             'Middle SDI', 'High-middle SDI', 'High SDI', 'Uttar Pradesh, Rural', 'Uttar Pradesh, Urban',
+             'Kerala, Rural', 'Kerala, Urban', 'Bihar, Rural', 'Bihar, Urban']
 JOB_MEM = 20  # GB
 
 
