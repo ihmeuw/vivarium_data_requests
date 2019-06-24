@@ -12,4 +12,4 @@ configuration:
     input_data:
         location: {name}
         input_draw_number: 0
-        artifact_path: /share/costeffectiveness/artifacts/vivarium_data_requests/jun_17_laura_lamberti/{fname}.hdf
+        artifact_path: /share/costeffectiveness/artifacts/vivarium_data_requests/2019_06_17_laura_lamberti/{fname}.hdf
