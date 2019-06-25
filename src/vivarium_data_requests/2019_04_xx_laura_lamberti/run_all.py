@@ -16,7 +16,7 @@ def format_fname(fname: str):
 
 
 def get_output_path():
-    path = pathlib.Path("/share/costeffectiveness/artifacts/vivarium_data_requests/jun_17_laura_lamberti/")
+    path = pathlib.Path("/share/costeffectiveness/artifacts/vivarium_data_requests/2019_04_xx_laura_lamberti/")
     path.mkdir(parents=True, exist_ok=True)
     return path
 
