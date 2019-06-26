@@ -1,15 +1,15 @@
 plugins:
     optional:
         data:
-            controller: "vivarium_inputs.data_artifact.ArtifactBuilder"
+            controller: "vivarium_public_health.dataset_manager.ArtifactManager"
             builder_interface: "vivarium_public_health.dataset_manager.ArtifactManagerInterface"
 
 components:
-    vivarium_data_requests.2019_06_17_laura_lamberti:
+    vivarium_data_requests.2019_04_xx_laura_lamberti:
         - ResearcherRequestComponent()
 
 configuration:
     input_data:
         location: {name}
         input_draw_number: 0
-        artifact_path: /share/costeffectiveness/artifacts/vivarium_data_requests/2019_06_17_laura_lamberti/{fname}.hdf
+        artifact_path: /share/costeffectiveness/artifacts/vivarium_data_requests/2019_04_xx_laura_lamberti/{fname}.hdf
