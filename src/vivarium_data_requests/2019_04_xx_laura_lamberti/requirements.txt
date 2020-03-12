@@ -65,7 +65,7 @@ python-dateutil==2.8.0
 pytz==2018.9
 PyYAML==5.1
 redis==3.2.1
-requests==2.18.4
+requests==2.20.0
 risk-distributions==2.0.1
 risk-utils==0.3.4
 ruamel-yaml==0.15.37
